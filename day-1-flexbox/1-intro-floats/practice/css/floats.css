@@ -1,0 +1,81 @@
+/* Border box declaration 
+https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+html {
+  box-sizing: border-box;
+}
+/* inherit border-box on all elements in the universe and before and after
+ */
+*, 
+*:before, 
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+	font-family: Arial, Geneva, sans-serif;
+}
+a {
+	color: #2772B0;
+}
+.wrapper {
+	width: 97%;
+	max-width: 1200px;
+	margin: 0 auto;
+	float: none;
+	background-color: #fff;
+}
+
+div img {
+	width: 100%;
+	max-width: 225px; 
+}
+
+/* grid system -- mobile first! */
+.row {
+display: flex;
+flex-flow: row wrap;
+}
+
+/* attribute selector, as below and we are giving margin as top and bottom 0, right and left as 4%.
+we can even go with padding model and make needed changes as well, but most grid systems are going with flex box */
+[class*="col-1"] {
+	margin-left: 4%;
+}
+
+.col-1 {
+  background-color: #ffc;
+}
+
+/* Mobile Landscape Screen Sizes */
+@media only screen and (min-width: 480px)  {
+
+
+}
+/* Desktop screen Sizes */
+@media only screen and (min-width: 768px) {
+	/* flex basis or width adding as 20% */
+ .col-1{
+	 flex: 0 0 20%;
+	 background-color: #ffc;
+ }
+
+
+ /* twice size of col-1 */
+ .col-2{
+	 flex: 0 0 44%;
+	 background-color: #ccf;
+ }
+
+  /* thrice size of col-1 */
+ .col-3{
+	 flex: 0 0 50%;
+	 background-color: #fcf;
+ }
+
+ /* 4 times the size of col-1, only 1 item with margins at beginning and end 4% */
+ .col-4{
+	 flex: 0 0 92%;
+	 background-color: #cff;
+ }
+
+}
