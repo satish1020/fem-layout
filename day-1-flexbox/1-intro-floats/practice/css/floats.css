@@ -48,8 +48,22 @@ we can even go with padding model and make needed changes as well, but most grid
 
 /* Mobile Landscape Screen Sizes */
 @media only screen and (min-width: 480px)  {
+.col-1-2.col-1.col-2{
+	flex: 0 0 44%;
+}
 
-
+.col-1-4,
+.col-3,
+.col-4 {
+	flex: 0 0 92%;
+}
+.col-3-6 {
+	flex: 0 0 44%;
+}
+.col-6-3 {
+	flex: 0 0 92%;
+	order: -1;
+}
 }
 /* Desktop screen Sizes */
 @media only screen and (min-width: 768px) {
@@ -77,5 +91,15 @@ we can even go with padding model and make needed changes as well, but most grid
 	 flex: 0 0 92%;
 	 background-color: #cff;
  }
+
+ /*  it will be neutral */
+ .col-6-3{
+	 flex: 0 0 44%;
+	 order: 0;
+ }
+
+.col-3-6{
+	flex: 0 0 20%;
+}
 
 }
